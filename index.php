@@ -5,23 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>php snack</title>
+    <?php
+
+        $hotels = [
+
+            [
+                'name' => 'Hotel Belvedere',
+                'description' => 'Hotel Belvedere Descrizione',
+                'parking' => true,
+                'vote' => 4,
+                'distance_to_center' => 10.4
+            ],
+            [
+                'name' => 'Hotel Futuro',
+                'description' => 'Hotel Futuro Descrizione',
+                'parking' => true,
+                'vote' => 2,
+                'distance_to_center' => 2
+            ],
+            [
+                'name' => 'Hotel Rivamare',
+                'description' => 'Hotel Rivamare Descrizione',
+                'parking' => false,
+                'vote' => 1,
+                'distance_to_center' => 1
+            ],
+            [
+                'name' => 'Hotel Bellavista',
+                'description' => 'Hotel Bellavista Descrizione',
+                'parking' => false,
+                'vote' => 5,
+                'distance_to_center' => 5.5
+            ],
+            [
+                'name' => 'Hotel Milano',
+                'description' => 'Hotel Milano Descrizione',
+                'parking' => true,
+                'vote' => 2,
+                'distance_to_center' => 50
+            ],
+
+        ];
+
+    ?>
 </head>
 <body>
-    <!-- Stampare una stringa verde se la variabile password passata in GET è uguale a “Boolean”, altrimenti stampare una stringa rossa.  -->
-    <?php 
+    <!-- stampare nome descrizione e voto di ogni hotel -->
+    <h1>
+        <?php 
 
-        foreach ($_GET as $value) {
-            
-            echo $value; 
-            
-        }
-        if(in_array("Boolean", $_GET)){
-            echo "<h1 class='green'>yes</h1>";
-        }else{
-            echo "<h1 class='red'>no</h1>";
-        }
-         
-    ?>
+            foreach ($hotels as $key => $hotel) {
+                
+                echo $hotel ["name"] . "<br>";
+                echo $hotel ["description"] . "<br>";
+                echo $hotel ["vote"] . "<br>-----------<br>";
+                
+            }
+    
+        ?>
+
+    </h1>
     
 
 </body>

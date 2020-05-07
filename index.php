@@ -14,13 +14,21 @@
     <h1>
         <?php 
 
-            foreach ($hotels as $key => $hotel) {
-                
+            function printHotel($hotel){
+
                 echo $hotel ["name"] . "<br>";
                 echo $hotel ["description"] . "<br>";
                 echo $hotel ["vote"] . "<br>-----------<br>";
+            };
+            foreach ($hotels as $key => $hotel) {
+
+                printHotel($hotel);
                 
-            }
+                // echo $hotel ["name"] . "<br>";
+                // echo $hotel ["description"] . "<br>";
+                // echo $hotel ["vote"] . "<br>-----------<br>";
+                
+            };
     
         ?>
 

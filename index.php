@@ -7,28 +7,20 @@
     <title>php snack</title>
     <?php 
         require_once "db.php";
+        $min = $_GET["min"];
+        $max = $_GET["max"];
+        $count = $_GET["count"];    
     ?>
 </head>
 <body>
-    <!-- stampare nome descrizione e voto di ogni hotel -->
+    <!-- stampare 10 numeri presi dal localhost -->
     <h1>
         <?php 
-
-            function printHotel($hotel){
-
-                echo $hotel ["name"] . "<br>";
-                echo $hotel ["description"] . "<br>";
-                echo $hotel ["vote"] . "<br>-----------<br>";
-            };
-            foreach ($hotels as $key => $hotel) {
-
-                printHotel($hotel);
+            for ($i=0; $i < $count; $i++) { 
+                echo rand($min, $max) . "<br>";
                 
-                // echo $hotel ["name"] . "<br>";
-                // echo $hotel ["description"] . "<br>";
-                // echo $hotel ["vote"] . "<br>-----------<br>";
-                
-            };
+            }
+
     
         ?>
 

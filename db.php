@@ -1,43 +1,31 @@
 <?php
 
-$hotels = [
-
+$class = [
     [
-        'name' => 'Hotel Belvedere',
-        'description' => 'Hotel Belvedere Descrizione',
-        'parking' => true,
-        'vote' => 4,
-        'distance_to_center' => 10.4
+      'name' => 'Marco',
+      'lastname' => 'Rossi',
+      'scores' => [ 5, 6, 7, 9, 10 ]
     ],
     [
-        'name' => 'Hotel Futuro',
-        'description' => 'Hotel Futuro Descrizione',
-        'parking' => true,
-        'vote' => 2,
-        'distance_to_center' => 2
+      'name' => 'Piero',
+      'lastname' => 'Bianchi',
+      'scores' => [ 3, 3, 4, 6, 8 ]
     ],
     [
-        'name' => 'Hotel Rivamare',
-        'description' => 'Hotel Rivamare Descrizione',
-        'parking' => false,
-        'vote' => 1,
-        'distance_to_center' => 1
+      'name' => 'Chiara',
+      'lastname' => 'Gialli',
+      'scores' => [ 1, 5, 10 ]
     ],
     [
-        'name' => 'Hotel Bellavista',
-        'description' => 'Hotel Bellavista Descrizione',
-        'parking' => false,
-        'vote' => 5,
-        'distance_to_center' => 5.5
+      'name' => 'Francesca',
+      'lastname' => 'Marroni',
+      'scores' => [ 1, 1, 10, 10]
     ],
     [
-        'name' => 'Hotel Milano',
-        'description' => 'Hotel Milano Descrizione',
-        'parking' => true,
-        'vote' => 2,
-        'distance_to_center' => 50
+      'name' => 'Giorgio',
+      'lastname' => 'Verdi',
+      'scores' => [ 1, 5, 10, 10, 5, 5 ]
     ],
-
-];
+  ];
 
 ?>

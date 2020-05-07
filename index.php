@@ -7,61 +7,35 @@
     <title>php snack</title>
     <?php
 
-        $hotels = [
-
-            [
-                'name' => 'Hotel Belvedere',
-                'description' => 'Hotel Belvedere Descrizione',
-                'parking' => true,
-                'vote' => 4,
-                'distance_to_center' => 10.4
-            ],
-            [
-                'name' => 'Hotel Futuro',
-                'description' => 'Hotel Futuro Descrizione',
-                'parking' => true,
-                'vote' => 2,
-                'distance_to_center' => 2
-            ],
-            [
-                'name' => 'Hotel Rivamare',
-                'description' => 'Hotel Rivamare Descrizione',
-                'parking' => false,
-                'vote' => 1,
-                'distance_to_center' => 1
-            ],
-            [
-                'name' => 'Hotel Bellavista',
-                'description' => 'Hotel Bellavista Descrizione',
-                'parking' => false,
-                'vote' => 5,
-                'distance_to_center' => 5.5
-            ],
-            [
-                'name' => 'Hotel Milano',
-                'description' => 'Hotel Milano Descrizione',
-                'parking' => true,
-                'vote' => 2,
-                'distance_to_center' => 50
-            ],
-
-        ];
 
     ?>
 </head>
 <body>
-    <!-- stampare nome descrizione e voto di ogni hotel -->
+    <!-- 10 numeri casuali, poi il min, max e media-->
     <h1>
         <?php 
-
-            foreach ($hotels as $key => $hotel) {
-                
-                echo $hotel ["name"] . "<br>";
-                echo $hotel ["description"] . "<br>";
-                echo $hotel ["vote"] . "<br>-----------<br>";
-                
+            
+            $min = 100;
+            $max = 1;
+            $avg = 0;
+            for ($i=0; $i < 10; $i++) { 
+                $myNewInt = rand(1, 100);
+                if ($myNewInt < $min) {
+                   $min = $myNewInt;
+                }
+                if ($myNewInt > $max) {
+                    $max = $myNewInt;
+                }
+                $avg += $myNewInt;
+                echo $myNewInt . "<br>";
             }
-    
+            $avg /= 10; //$avg = $avg /10
+            echo "<br>-----------------<br>";
+            echo "min: " . $min . "<br>";
+            echo "max: " . $max . "<br>";
+            echo "avg: " . $avg . "<br>";
+
+
         ?>
 
     </h1>
